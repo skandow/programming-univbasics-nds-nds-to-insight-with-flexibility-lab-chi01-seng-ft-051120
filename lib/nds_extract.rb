@@ -38,8 +38,9 @@ def movies_with_director_key(name, movies_collection)
   array_index = 0 
   while array_index < movies_collection.length do 
     this_movie = {}
-    this_movie[:name] = movie_with_director_name(name, movies_collection)
-    this_result << this_movie[:name]
+    :directors_name = name
+    this_movie[:directors_name] = movie_with_director_name(name, movies_collection[array_index])
+    this_result << this_movie[:directors_name]
     array_index += 1 
   end
   this_result
