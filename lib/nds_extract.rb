@@ -34,6 +34,17 @@ end
 # Your code after this point
 
 def movies_with_director_key(name, movies_collection)
+  this_result = []
+  array_index = 0 
+  while array_index < movies_collection.length do 
+    this_movie = {}
+    :director_name = name
+    this_movie[:director_name] => movie_with_director_name
+    this_result << this_movie[:director_name]
+    array_index += 1 
+  end
+  this_result
+end
   # GOAL: For each Hash in an Array (movies_collection), provide a collection
   # of movies and a directors name to the movie_with_director_name method
   # and accumulate the returned Array of movies into a new Array that's
