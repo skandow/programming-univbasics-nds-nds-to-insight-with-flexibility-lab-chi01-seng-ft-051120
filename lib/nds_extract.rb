@@ -98,6 +98,10 @@ def movies_with_directors_set(source)
       director_and_movie = {}
       director_and_movie[:title] = source[director_index][:movies][movie_index][:title]
       director_and_movie[:director_name] = director_name
+        if !!source[director_index][:movies][movie_index][:studio] && !!source[director_index][:movies][movie_index][:worldwide_gross]
+          director_and_movie[:studio] = source[director_index][:movies][movie_index][:studio]
+          director_and_movie[:worldwide_gross] = source[director_index][:movies][movie_index][:worldwide_gross]
+        end 
       this_directors_movies << director_and_movie
       movie_index += 1 
     end
